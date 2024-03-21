@@ -3,9 +3,7 @@
 ## Integrantes:
 
 - Ana María Barrientos Guerrero
-- Miguel Alejandro Espinoza Guzmán
-- Everardo Guadalupe Torrez Tovar
-- Emilio Antonio Placios Arvizu
+- Valeria Gomez Herrera
 
 # Objetivo General
 
@@ -67,19 +65,19 @@ Mensajes como: "Feliz Navidad" en una pantalla Oled, colocada en una de las mano
 
 
 # Base de datos 
-
-*Tabla 1 - "Dispositivos"*
-  
-  | Id_Dispositivo | Nombre_Dispositivo | Ubicacíon |
-  |--|--|--|
-  |1 | Noah Torres | Edificio TI|
-
  
-*Tabla 3 - "Villancicos"*
+*Tabla 1 - "Tiempo"*
   
-   | Id_Villancico | Nombre | Letra/ubi |
-   |--|--|--|
-   |1 | Campanas de Belén | Audio/telefono/noah/|
-    
-    
-  
+| Columna      | Tipo        | Restricciones         |
+|--------------|-------------|-----------------------|
+| TiempoID     | INT         | NOT NULL, PRIMARY KEY |
+| FechaHora    | DATETIME    |                       |
+| ZonaHoraria  | VARCHAR(50) |                       |
+
+*Tabla 2 - "Mensajes"*
+
+| Columna     | Tipo         | Restricciones                                |
+|-------------|--------------|----------------------------------------------|
+| MensajesID  | INT          | NOT NULL, PRIMARY KEY                        |
+| MensajeCont | VARCHAR(100) | NOT NULL                                     |
+| TiempoID    | INT          | FOREIGN KEY REFERENCES Tiempo(TiempoID)     |
