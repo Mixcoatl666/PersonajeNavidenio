@@ -2,8 +2,8 @@
 
 ## Integrantes:
 
-- Ana María Barrientos Guerrero
 - Valeria Gomez Herrera
+- Noah Noel Arredondo Torres
 
 # Objetivo General
 
